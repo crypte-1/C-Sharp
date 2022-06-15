@@ -6,6 +6,7 @@ public class player : MonoBehaviour
 {
      public Rigidbody rb;
      public float ForwordForce = 2000f;
+     public float SideForce = 500f;
     // // Start is called before the first frame update
     // void Start()
     // {
@@ -19,11 +20,11 @@ public class player : MonoBehaviour
         rb.AddForce(0,00,ForwordForce* Time.deltaTime );
         if( Input.GetKey("a") )
          {
-            rb.AddForce( - 600* Time.deltaTime,0,0);
+            rb.AddForce( - SideForce* Time.deltaTime,0,0);
          }
         if( Input.GetKey("d") )
           {
-            rb.AddForce(1000* Time.deltaTime,0,0);
+            rb.AddForce(SideForce* Time.deltaTime,0,0);
           }
     }
 
